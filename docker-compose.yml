@@ -9,5 +9,17 @@ services:
       - .env
     volumes:
       - postgres_data:/var/lib/postgresql/data
+  app:
+    build: .
+    container_name: app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    env_file:
+      - .env
+    volumes:
+      - ./app:/app
+
 volumes:
   postgres_data:
