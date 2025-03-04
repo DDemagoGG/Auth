@@ -1,8 +1,0 @@
-fastapi 
-uvicorn
-psycopg2-binary
-asyncpg
-sqlalchemy
-alembic
-pydantic
-pydantic-settings
